@@ -6,6 +6,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        DayAdvice day = new DayAdviceImpl();
+
+        try {
+            getOutput(day.advice(getData()));
+        } catch (Exception e) {
+            getOutput("Exception: " + e.getMessage());
+        }
     }
 
     private static Day getData() {
